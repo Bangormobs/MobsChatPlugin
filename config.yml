@@ -1,0 +1,13 @@
+servername: ServerNameHere
+password: ServerPasswordHere
+host: my.host.co.uk
+hidden: 0
+ranks:
+  b: banned
+  v: visitor
+  u: user
+  t: trusted
+  s: trusted
+  p: trusted
+  c: committee
+  a: admin

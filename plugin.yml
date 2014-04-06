@@ -1,0 +1,3 @@
+name: MobsChatPlugin
+main: uk.co.mobsoc.chat.plugin.ChatPlugin
+version: 0.2
