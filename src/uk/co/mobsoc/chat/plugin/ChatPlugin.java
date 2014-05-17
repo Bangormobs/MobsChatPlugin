@@ -43,6 +43,7 @@ public class ChatPlugin extends JavaPlugin{
 	public static ChatPlugin inst;
 	SocketCallbacks callback;
 	private String USERNAME, PASSWORD, HOST;
+	public static boolean IGNOREVAULT=false;
 	public static ArrayList<Colour> colourList = new ArrayList<Colour>();
 	public static String THISHOST="", NAME="";
 	public static int PORT=0, MAPPORT=-1, HIDDEN=0;
@@ -153,6 +154,9 @@ public class ChatPlugin extends JavaPlugin{
 		PASSWORD = getConfig().getString("password");
 		HOST = getConfig().getString("host");
 		HIDDEN = getConfig().getInt("hidden");
+		if(getConfig().getBoolean("ignorevault")==true){
+			IGNOREVAULT=true;
+		}
 	}
 	
 	/**

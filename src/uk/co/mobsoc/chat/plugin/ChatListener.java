@@ -84,8 +84,8 @@ public class ChatListener implements Listener{
     			sep=" ";
     		}
     		PrivateMessagePacket pmp = new PrivateMessagePacket();
-    		pmp.from = player.getName();
-    		pmp.to = args[1];
+    		pmp.from = player.getUniqueId();
+    		pmp.toString = args[1];
     		pmp.message = PUtils.bukkitMarkupToInternal(message);
     		ChatPlugin.sConn.send(pmp);
     	}else if(msg.startsWith("/who ") || msg.startsWith("/playerlist ") || msg.startsWith("/list ")){

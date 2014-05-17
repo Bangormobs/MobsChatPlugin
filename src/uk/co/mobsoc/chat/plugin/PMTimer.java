@@ -33,9 +33,9 @@ public class PMTimer implements Runnable{
 			PluginCallbacks.delayedPMs = new ArrayList<PrivateMessagePacket>();	
 		}
 		for(PrivateMessagePacket pmp : list){
-			Player to = Bukkit.getPlayer(pmp.to);
-			Player from = Bukkit.getPlayer(pmp.from);
-			String msg = "[PM] "+PUtils.InternalMarkupToBukkit(pmp.from)+" > "+PUtils.InternalMarkupToBukkit(pmp.to)+" : "+PUtils.InternalMarkupToBukkit(pmp.message);
+			Player to = Bukkit.getPlayer(pmp.toString);
+			Player from = Bukkit.getPlayer(pmp.fromChosenName);
+			String msg = "[PM] "+PUtils.InternalMarkupToBukkit(pmp.fromChosenName)+" > "+PUtils.InternalMarkupToBukkit(pmp.toString)+" : "+PUtils.InternalMarkupToBukkit(pmp.message);
 			if(to!=null && from!=null && to.getName().equalsIgnoreCase(from.getName())){
 				to.sendMessage(msg);
 				continue;

@@ -46,6 +46,7 @@ public class AuthMain {
     	}catch(NoClassDefFoundError e){
     		System.out.println("No Vault Found! Not enforcing groups!");
     	}
+    	if(ChatPlugin.IGNOREVAULT==true){ permission=null; }
         return (permission != null);
     }
     
